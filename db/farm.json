@@ -1,0 +1,168 @@
+{
+  "Soontorn": [
+    {
+      "id": 1,
+      "img": "farm1icon.png",
+      "farmname": "สุนทรฟาร์ม",
+      "create": "2018-05-21",
+      "customername": "สุนทร ป้องแสนสี",
+      "package": "GOLD",
+      "quantityuser": 20,
+      "gateway": true,
+      "analytics": false,
+      "blockchain": true,
+      "exp": "2020-12-31",
+      "parameter": 2,
+      "dashboard": 2,
+      "planttype": "พืชสวน",
+      "whenplanted": "2019-09-25",
+      "harvestdate": "2020-10-21",
+      "harvest":500,
+      "fertilizertype": [
+        {
+          "one": "ปุ๋ยเคมี",
+          "two": "ปุ๋ยอินทรีย์ ",
+          "three": " ปุ๋ยชีวภาพ",
+          "four": "ปุ๋ยอินทรีย์ชีวภาพ"
+        }
+      ],
+      "number": 5,
+      "price": 8,
+      "marketprice": 7.7,
+
+      "node": [
+        {
+          "updatetime": "15-05-2021",
+          "create": "2020-02-2020",
+          "temp": 30.5,
+          "humi": 74,
+          "light": 86,
+          "mois": 300,
+          "ec": 4,
+          "relay": [
+            {
+              "relay1": true,
+
+              "relay2": false,
+              "relay3": false
+            }
+          ],
+          "status_on_time": false,
+          "status_on_data": true
+        },
+        {
+          "updatetime": "15-05-2021",
+          "create": "2020-02-2020",
+          "temp": 35.5,
+          "humi": 78,
+          "light": 108,
+          "mois": 1000,
+          "ec": 2,
+          "relay": [
+            {
+              "relay1": true,
+              "relay2": true,
+              "relay3": false
+            }
+          ],
+          "status_on_time": false,
+          "status_on_data": true
+        },
+        {
+          "updatetime": "15-05-2021",
+          "create": "2020-02-2020",
+          "temp": 30.5,
+          "humi": 74,
+          "light": 86,
+          "mois": 300,
+          "ec": 4,
+          "relay": [
+            {
+              "relay1": true,
+
+              "relay2": false,
+              "relay3": false
+            }
+          ],
+          "status_on_time": false,
+          "status_on_data": true
+        },
+        {
+          "updatetime": "15-05-2021",
+          "create": "2020-02-2020",
+          "temp": 30.5,
+          "humi": 74,
+          "light": 86,
+          "mois": 300,
+          "ec": 4,
+          "relay": [
+            {
+              "relay1": true,
+
+              "relay2": false,
+              "relay3": false
+            }
+          ],
+          "status_on_time": false,
+          "status_on_data": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "img": "farm2icon.png",
+      "farmname": "สุนทรฟาร์มนัมเบอร์ทู",
+      "create": "2018-05-21",
+      "customername": "สุนทร ป้องแสนสี",
+      "package": "PLATINUM",
+      "quantityuser": 20,
+      "gateway": false,
+      "analytics": false,
+      "blockchain": true,
+      "exp": "2020-12-31",
+      "parameter": 2,
+      "dashboard": 2,
+      "fertilizertype": "ปุ๋ยอินทรีย์",
+      "node": [
+        {
+          "updatetime": "15-05-2021",
+          "create": "2020-02-2020",
+          "temp": 30.5,
+          "humi": 74,
+          "light": 86,
+          "mois": 300,
+          "ec": 4,
+          "relay": [
+            {
+              "relay1": true,
+
+              "relay2": false,
+              "relay3": false
+            }
+          ],
+          "status_on_time": false,
+          "status_on_data": true
+        },
+        {
+          "updatetime": "15-05-2021",
+          "create": "2020-02-2020",
+          "temp": 35.5,
+          "humi": 78,
+          "light": 108,
+          "mois": 1000,
+          "ec": 2,
+          "relay": [
+            {
+              "relay1": true,
+
+              "relay2": true,
+              "relay3": false
+            }
+          ],
+          "status_on_time": false,
+          "status_on_data": true
+        }
+      ]
+    }
+  ]
+}
