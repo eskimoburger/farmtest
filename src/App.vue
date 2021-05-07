@@ -56,152 +56,8 @@
       <aside class="page-leftbar pt-10 ">
         <div class="h-full w-full  bg-white    ">
           <ul class="flex flex-col list-none  ">
-            <li class="items-center ">
-              <router-link
-                id="router"
-                to="/"
-                class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper "
-              >
-                <i class="fas fa-house-user  ml-4 mr-2 text-2xl"></i>
-
-                home</router-link
-              >
-            </li>
-            <li class="items-center">
-              <router-link
-                id="router"
-                to="/about"
-                class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-5"
-                @click="dropdown"
-              >
-                <i class="fas fa-list-alt  ml-4 mr-2 text-2xl"></i>
-                Overviews
-                <span
-                  :class="[
-                    isActive
-                      ? 'fas fa-caret-down first text-green-600 relative transform rotate-180 duration-500'
-                      : 'fas fa-caret-down first text-green-600 relative transform  duration-500 -rotate-1',
-                  ]"
-                ></span>
-              </router-link>
-
-              <!-- dropdown -->
-              <ul
-                :class="[
-                  isActive ? 'hidden duration-500 ' : ' block duration-500',
-                ]"
-              >
-                <li class="items-center ">
-                  <router-link
-                    id="router"
-                    to="/farm"
-                    class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-5"
-                    @click="dropdownNode"
-                  >
-                    <i class=" ml-12 mr-2 text-2xl "></i>
-                    farm1
-                    <span
-                      :class="[
-                        isActiveNode
-                          ? 'fas fa-caret-down first text-green-600 relative transform rotate-180 duration-500'
-                          : 'fas fa-caret-down first text-green-600 relative transform  duration-500 -rotate-1',
-                      ]"
-                    ></span>
-                  </router-link>
-
-                  <!-- DropdownNode -->
-                  <ul
-                    :class="[
-                      isActiveNode
-                        ? 'hidden duration-500 '
-                        : ' block duration-500',
-                    ]"
-                  >
-                    <li class="items-center ">
-                      <router-link
-                        id="router"
-                        to="/farm/node"
-                        class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-5"
-                      >
-                        <i class=" ml-12 mr-2 text-2xl "></i>
-                        node1
-                      </router-link>
-                      <router-link
-                        id="router"
-                        to="/farm1/node1"
-                        class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-5"
-                      >
-                        <i class=" ml-12 mr-2 text-2xl "></i>
-                        node2
-                      </router-link>
-                    </li>
-                  </ul>
-                  <!-- ---------------------------- -->
-                </li>
-                <!-- farm2Example -->
-                <li class="items-center ">
-                  <router-link
-                    id="router"
-                    to="/farm1"
-                    class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-5"
-                    @click="dropdownNode2"
-                  >
-                    <i class=" ml-12 mr-2 text-2xl "></i>
-                    farm2
-                    <span
-                      :class="[
-                        isActiveNode2
-                          ? 'fas fa-caret-down first text-green-600 relative transform rotate-180 duration-500'
-                          : 'fas fa-caret-down first text-green-600 relative transform  duration-500 -rotate-1',
-                      ]"
-                    ></span>
-                  </router-link>
-
-                  <!-- DropdownNode -->
-                  <ul
-                    :class="[
-                      isActiveNode2
-                        ? 'hidden duration-500 '
-                        : ' block duration-500',
-                    ]"
-                  >
-                    <li class="items-center ">
-                      <router-link
-                        id="router"
-                        to="/farm1/node1"
-                        class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-5"
-                      >
-                        <i class=" ml-12 mr-2 text-2xl "></i>
-                        node1
-                      </router-link>
-                      <router-link
-                        id="router"
-                        to="/farm1/node1"
-                        class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-5"
-                      >
-                        <i class=" ml-12 mr-2 text-2xl "></i>
-                        node2
-                      </router-link>
-                    </li>
-                  </ul>
-                  <!-- ---------------------------- -->
-                </li>
-                <!-- farm2ExampleEnd -->
-              </ul>
-              <!-- ----------------------------------------------- -->
-            </li>
-
-            <li class="items-center">
-              <router-link
-                id="router"
-                to="/organization"
-                class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-5"
-              >
-                <i class="fas fa-user-plus  ml-4 mr-2 text-2xl"></i>
-                Organization</router-link
-              >
-            </li>
-
+           
+            
             <!-- -------------------------test----------------------- -->
 
             <li class="items-center ">
@@ -286,6 +142,17 @@
                 </li>
               </ul>
             </li>
+            <li class="items-center">
+              <router-link
+                id="router"
+                to="/organization"
+                class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-5"
+              >
+                <i class="fas fa-user-plus  ml-4 mr-2 text-2xl"></i>
+                Organization</router-link
+              >
+            </li>
+
 
             <!-- ------------------------------------------------------------- -->
           </ul>
