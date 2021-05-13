@@ -6,9 +6,21 @@
           <div class="text-black font-bold text-6xl p-8 ">
             Farm {{ farmData.id }} : {{ farmData.farmname }}
           </div>
-          <div class="text-gray-600 font-bold text-6xl p-8 ">
-            Dashboard
+          <div class=" text-bold mt-8 uppercase ">
+            <p
+              class="text-2xl  font-bold  text-white bg-green-500  border-b-4 border-r-4 border-green-700  rounded uppercase py-2 px-4"
+            >
+              <i class="fas fa-sync"></i> refresh
+            </p>
           </div>
+
+          <a href="https://www.google.com">
+            <div
+              class="text-gray-600 font-bold text-6xl p-8 hover:text-orangeSuper "
+            >
+              Dashboard
+            </div>
+          </a>
         </div>
         <div class=" flex  justify-between   flex-wrap mt-20 gap-y-10     ">
           <div>
@@ -17,7 +29,7 @@
             >
               <img
                 src="../assets/farm1_copy.png"
-                alt="farm1"
+                alt="farm123"
                 class=" h-auto rounded-3xl "
               />
 
@@ -31,7 +43,10 @@
                     <p class=" text-6xl">Node {{ showNodeIndex }}</p>
                     <div class=" space-x-5">
                       <router-link
-                        to="/farm/node"
+                        :to="{
+                          name: 'testnode',
+                          params: { id: id, nodeid: showNodeIndex },
+                        }"
                         class="bg-orangeSuper rounded-2xl px-5 py-1"
                       >
                         Edit
@@ -43,7 +58,7 @@
                       ></button>
                     </div>
                   </div>
-                  <div class=" p-5  text-black space-y-3">
+                  <div class=" p-5  text-black space-y-3 ">
                     <p>Update Time : {{ nodeDataSetup.updatetime }}</p>
                     <p>Create : {{ nodeDataSetup.create }}</p>
                     <p>Temp : {{ nodeDataSetup.temp }}</p>
@@ -53,7 +68,7 @@
                     <p>EC : {{ nodeDataSetup.ec }}</p>
                     <div v-for="(r, index) in nodeDataSetup.relay" :key="index">
                       <p>
-                        Relay {{index+1}} :
+                        Relay {{ index + 1 }} :
                         <span
                           :class="[
                             r.relay
@@ -160,6 +175,10 @@
         </div>
       </div>
     </div>
+
+    <router-link :to="{ name: 'testnode', params: { id: id, nodeid: 1 } }"
+      >5555555</router-link
+    >
   </div>
 </template>
 
@@ -201,7 +220,7 @@ export default {
       .catch((err) => console.log(err.message));
   },
   setup() {
-    const showNodeIndex = ref("");
+    const showNodeIndex = ref(0);
     const nodeDataSetup = ref([]);
 
     return { nodeDataSetup, showNodeIndex };

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 
 
+
 const routes = [
   {
     path: '/',
@@ -72,8 +73,14 @@ const routes = [
     path:'/pagefarmtest/:id',
     name:'pagefarmtest',
     component:()=>import('../views/pagefarmtest.vue'),
-    props:true
+    props:true,
+},
 
+{
+  path:'/pagefarmtest/:id/node/:nodeid',
+  name:'testnode',
+  component:()=>import('../views/Nodetest.vue'),
+  props:true,
 
 },
 

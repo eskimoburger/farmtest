@@ -118,8 +118,8 @@
 
                   <!-- DropdownNode -->
                   <ul
-                    v-for="(node, index, key) in farm.node"
-                    :key="key"
+                    v-for="(node, index) in farm.node"
+                    :key="index"
                     :class="[
                       (isActiveNode &&  ID == farm.id)
                         ? ' block duration-500'
@@ -130,7 +130,7 @@
                     <li class="items-center ">
                       <router-link
                         id="router"
-                        to="/farm/node"
+                        :to="{ name:'testnode' ,params :{ id:farm.id , nodeid:index+1}}"
                         class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-5"
                       >
                         <i class=" ml-12 mr-2 text-2xl "></i>
