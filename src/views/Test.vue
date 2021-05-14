@@ -37,10 +37,15 @@
         ><i class="fa fa-lock mr-1"></i> secure</span
       >
     </div>
+
+     <Slider
+            v-model="value"
+          />
   </div>
 </template>
 
 <script>
+import Slider from '@vueform/slider'
 export default {
   data() {
     return {
@@ -48,6 +53,7 @@ export default {
     };
     // we will store base64 format of image in this string
   },
+  components:{Slider},
   methods: {
     previewImage: function(event) {
       // Reference to the DOM input element

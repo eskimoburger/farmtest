@@ -56,15 +56,13 @@
       <aside class="page-leftbar pt-10 ">
         <div class="h-full w-full  bg-white    ">
           <ul class="flex flex-col list-none  ">
-           
-            
             <!-- -------------------------test----------------------- -->
 
             <li class="items-center ">
               <router-link
                 id="router"
                 to="/farmtest"
-                class="text-black hover:text-orangeSuper text-2xl  py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-10  uppercase"
+                class="text-black hover:text-orangeSuper text-2xl  py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper   uppercase"
               >
                 <i class="fas fa-house-user  ml-4 mr-2 text-2xl"></i>
 
@@ -82,7 +80,7 @@
                 Overviews test
                 <span
                   :class="[
-                    isActive 
+                    isActive
                       ? 'fas fa-caret-down first text-green-600 relative transform rotate-180 duration-500'
                       : 'fas fa-caret-down first text-green-600 relative transform  duration-500 -rotate-1',
                   ]"
@@ -92,26 +90,25 @@
               <!-- dropdown -->
               <ul
                 :class="[
-                  isActive  ? 'hidden duration-500 ' : ' block duration-500',
+                  isActive ? 'hidden duration-500 ' : ' block duration-500',
                 ]"
-                v-for="(farm) in farmData"
+                v-for="farm in farmData"
                 :key="farm.id"
               >
                 <li class="items-center ">
                   <router-link
                     id="router"
-                    :to="{ name:'pagefarmtest' ,params :{ id:farm.id}}"
+                    :to="{ name: 'pagefarmtest', params: { id: farm.id } }"
                     class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-5"
-                    @click="dropdownNode(farm.id) ,(ID = farm.id)"
+                    @click="dropdownNode(farm.id), (ID = farm.id)"
                   >
                     <i class=" ml-12 mr-2 text-2xl "></i>
                     farm {{ farm.id }}
                     <span
                       :class="[
-                        (isActiveNode &&  ID == farm.id)
+                        isActiveNode && ID == farm.id
                           ? 'fas fa-caret-down first text-green-600 relative transform  duration-500 -rotate-1'
                           : 'fas fa-caret-down first text-green-600 relative transform rotate-180 duration-500',
-                          
                       ]"
                     ></span>
                   </router-link>
@@ -121,16 +118,18 @@
                     v-for="(node, index) in farm.node"
                     :key="index"
                     :class="[
-                      (isActiveNode &&  ID == farm.id)
+                      isActiveNode && ID == farm.id
                         ? ' block duration-500'
                         : 'hidden duration-500 ',
-                        
                     ]"
                   >
                     <li class="items-center ">
                       <router-link
                         id="router"
-                        :to="{ name:'testnode' ,params :{ id:farm.id , nodeid:index+1}}"
+                        :to="{
+                          name: 'testnode',
+                          params: { id: farm.id, nodeid: index + 1 },
+                        }"
                         class="text-black hover:text-orangeSuper text-2xl uppercase py-3 font-bold block border-l-4 border-black hover:border-l-4 hover:border-orangeSuper mt-5"
                       >
                         <i class=" ml-12 mr-2 text-2xl "></i>
@@ -152,7 +151,6 @@
                 Organization</router-link
               >
             </li>
-
 
             <!-- ------------------------------------------------------------- -->
           </ul>
@@ -192,15 +190,14 @@
         <!-- <div class="h-full w-full border-orangeSuper border-8">
           
         </div> -->
-        <transition>
-           <router-view></router-view>
-        </transition>
-       
+
+      
+        <router-view></router-view>
       </main>
       <footer class="page-footer">
         <div class="flex justify-center items-center h-full">
           <div class=" text-lg text-white ">
-            Copyright © 2021-2025 Create by KITFORWARD
+            ©2021 KITFORWARD.CO.,LTD. All Rights Reserved.
           </div>
         </div>
       </footer>
@@ -214,7 +211,7 @@
 import { createPopper } from "@popperjs/core";
 export default {
   name: "home",
-  
+
   data() {
     return {
       isActive: true,
@@ -222,7 +219,7 @@ export default {
       isActiveNode2: true,
       dropdownPopoverShow: false,
       farmData: [],
-      ID:""
+      ID: "",
     };
   },
   methods: {
@@ -231,7 +228,7 @@ export default {
     },
     dropdownNode(id) {
       this.isActiveNode = !this.isActiveNode;
-      console.log(id)
+      console.log(id);
     },
     dropdownNode2() {
       this.isActiveNode2 = !this.isActiveNode2;

@@ -194,16 +194,17 @@ export default {
   }),
   methods: {},
   watch: {
-    $route(to, from) {
-      console.log("to", to.params);
-      console.log("from", from.params);
+    //from 
+    $route(to) {
+      // console.log("to", to.params);
+      // console.log("from", from.params);
       if (to.params.id == undefined) {
         console.log("Nodata");
       } else
         fetch("http://localhost:3000/Soontorn/" + to.params.id)
           .then((res) => res.json())
           .then((data) => {
-            console.log(" number " + data.node.length);
+           // console.log(" number " + data.node.length);
             this.farmData = data;
           })
           .catch((err) => console.log(err.message));
@@ -214,8 +215,8 @@ export default {
       .then((res) => res.json())
       .then((data) => {
         this.farmData = data;
-        console.log(" number " + data.node.length);
-        console.log(data.node[0].relay);
+        ///console.log(" number " + data.node.length);
+        //console.log(data.node[0].relay);
       })
       .catch((err) => console.log(err.message));
   },

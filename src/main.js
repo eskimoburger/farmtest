@@ -4,6 +4,11 @@ import router from './router'
 import store from './store'
 import './assets/tailwind.css'
 import VueFinalModal from 'vue-final-modal'
+import 'animate.css'
+import { Datetime } from 'vue-datetime'
+import 'vue-datetime/dist/vue-datetime.css'
+
+
 //import firebase from 'firebase'
 
 // const config = {
@@ -24,4 +29,5 @@ const Vue = createApp(App);
 
 
 Vue.use(VueFinalModal())
+Vue.use(Datetime)
 Vue.use(store).use(router).mount('#app')
