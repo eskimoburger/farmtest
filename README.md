@@ -22,3 +22,11 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### เปิด server จำลองด้วย JSON-Server
+```
+yarn generate
+```
+
+
